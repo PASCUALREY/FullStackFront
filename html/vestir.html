@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles_vestir.css">
+    <script type="text/javascript" src="../js/script_vestir.js"></script>
+    <title>Viste al Personaje</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="personaje">
+            <div class="cabeza">
+                <div id="rostro" class="rostro"></div>
+            </div>
+            <div class="parte-arriba">
+                <div id="remera" class="parte-superior"></div>
+            </div>
+            <div class="parte-abajo">
+                <div id="pantalon" class="parte-inferior"></div>
+            </div>
+            <div class="parte-calzado">
+                <div id="zapatilla-izq" class="parte-calzado-izq"></div>
+                <div id="zapatilla-der" class="parte-calzado-der"></div>
+            </div>
+        </div>
+
+        <div class="botones">
+            <div class="dropdown">
+                <button class="boton" onclick="vestirSuperior()">Vestir parte superior</button>
+                <div id="content-superior" class="dropdown-content">
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="boton" onclick="vestirInferior()">Vestir parte inferior</button>
+                <div id="content-inferior" class="dropdown-content">
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="boton" onclick="vestirCalzado()">Vestir calzado</button>
+                <div id="content-calzado" class="dropdown-content">
+                </div>
+            </div>
+
+            <button class="boton" onclick="desvestir()">Desvestir</button>
+            <button class="boton" onclick="guardar()">Guardar</button>
+        </div>
+        <footer>
+            <p id="usuario"> Usuario: </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

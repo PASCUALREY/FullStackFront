@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_buscar.css">
+    <script type="text/javascript" src="../js/script_buscar.js"></script>
+    <title>Viste al Personaje</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="personaje">
+            <div class="cabeza">
+                <div id="rostro" class="rostro"></div>
+            </div>
+            <div class="parte-arriba">
+                <div id="remera" class="parte-superior"></div>
+            </div>
+            <div class="parte-abajo">
+                <div id="pantalon" class="parte-inferior"></div>
+            </div>
+            <div class="parte-calzado">
+                <div id="zapatilla-izq" class="parte-calzado-izq"></div>
+                <div id="zapatilla-der" class="parte-calzado-der"></div>
+            </div>
+        </div>
+
+        <div>
+            <label for="variable1">Cantidad de Personajes</label>
+            <label id="labelVariable1"></label>
+
+            <br>
+
+            <label for="variable2">Personaje Actual</label>
+            <label id="labelVariable2"></label>
+        </div>
+
+        <div class="botones">
+            <button class="boton" onclick="iteracionAnterior()">Anterior</button>
+            <button class="boton" onclick="getPersonajes()">Buscar</button>
+            <button id="siguiente" class="boton" onclick="iteracionSiguiente()">Siguiente</button>
+        </div>
+        <footer>
+            <p id="usuario"> Usuario: </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

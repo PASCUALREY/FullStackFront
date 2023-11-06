@@ -1,0 +1,135 @@
+.persona {
+    display: inline-flex;
+    text-align: center;
+    margin: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ropa {
+    margin-top: 10px;
+}
+
+.parte-arriba {
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.parte-abajo {
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 20%;
+}
+
+.parte-calzado {
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabeza {
+    width: 100%;
+    height: 25%;
+    position: relative;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.rostro {
+    width: 40%;
+    height: 25%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 38%;
+}
+
+.parte-superior {
+    width: 50%;
+    height: 40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 28%;
+    bottom: 2%;
+}
+
+.parte-inferior {
+    width: 50%;
+    height: 30%;
+    background-size: cover;
+    left: 22%;
+    bottom: 70px;
+    position: absolute;
+}
+
+.parte-calzado-izq {
+    width: 30%;
+    height: 40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(25deg);
+    position: relative;
+    left: 26px;
+    top: 48px;
+}
+
+.parte-calzado-der {
+    width: 30%;
+    height: 100%;
+    transform: scaleX(-1);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 48%;
+    top: 77%;
+}
+
+#personaje {
+    width: 600px;
+    height: 600px;
+    background-color: #b0c4de;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../assets/personajes/body1.jpg");
+}
+
+@media screen and (max-width: 425px) {
+    #personaje {
+        width: 300px;
+        height: 300px;
+    }
+
+    .rostro {
+        left: 35%;
+    }
+
+    .parte-superior {
+        bottom: 0%;
+    }
+
+    .parte-inferior {
+        bottom: 38px;
+    }
+
+    .parte-calzado-izq {
+        left: 9px;
+        top: 22px;
+    }
+}
