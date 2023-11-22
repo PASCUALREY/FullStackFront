@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "open-cli html/login.html ",
+    "build": "open-cli html/login.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
