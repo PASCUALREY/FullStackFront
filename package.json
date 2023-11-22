@@ -2,14 +2,10 @@
   "name": "juegotpfront",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "login.js",
   "scripts": {
-    "build": "open-cli html/login.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "open-cli": "^7.2.0"
-  }
+  "license": "ISC"
 }
