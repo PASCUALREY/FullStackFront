@@ -114,7 +114,9 @@ function mostrarCalzado(json) {
 
 function mostrarPersonaje(json) {
     console.log(json.name);
+    document.getElementById("nombre").innerHTML = json.name;
 }
+
 function mostrarRostro(json) {
     document.getElementById('rostro').style.backgroundImage = "url('../assets/personajes/" + json.faceImg + "')";
     document.getElementById('rostro').style.display = "block";
