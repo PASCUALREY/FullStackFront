@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000"
+const BASE_URL = "https://juego-api.onrender.com"
 let personajeActual = 1;
 let totalPersonajes = 0;
 
