@@ -1,10 +1,12 @@
+const BASE_URL = "http://localhost:5000";
+
 function inicioSesion() {
     // Datos de inicio de sesión
     const usuario = document.getElementById("username").value;
     const contraseña = document.getElementById("password").value;
 
     // URL del endpoint de inicio de sesión
-    const urlInicioSesion = "http://localhost:5000/api/login";
+    const urlInicioSesion = BASE_URL+"/api/login";
 
     // Objeto con los datos a enviar
     const datosInicioSesion = {

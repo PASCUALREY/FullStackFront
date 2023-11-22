@@ -1,9 +1,10 @@
+const BASE_URL = "http://localhost:5000"
 let personajeActual = 1;
 let totalPersonajes = 0;
 
 function getPersonajes() {
     const token = sessionStorage.getItem('token');
-    fetch('http://localhost:5000/api/login/usuarios/buscar', {
+    fetch(BASE_URL+'/api/login/usuarios/buscar', {
         headers: { Authorization: token }
     })
         // Exito
@@ -25,7 +26,7 @@ function buscarPersonajes(json) {
 
     if (totalPersonajes != 0) {
         const token = sessionStorage.getItem('token');
-        fetch("http://localhost:5000/api/jugadores/" + player[personajeActual-1]._id, {
+        fetch(BASE_URL+"/api/jugadores/" + player[personajeActual-1]._id, {
             headers: { Authorization: token },
         })
             .then(response => response.json())  // convertir a json
@@ -49,7 +50,7 @@ function buscarPersonajes(json) {
 
 function buscarSuperior(json) {
     const token = sessionStorage.getItem('token');
-    fetch("http://localhost:5000/api/vestimenta/" + json.superior, {
+    fetch(BASE_URL+"/api/vestimenta/" + json.superior, {
         headers: { Authorization: token },
     })
         .then(response => response.json())  // convertir a json
@@ -61,7 +62,7 @@ function buscarSuperior(json) {
 
 function buscarRostro(json) {
     const token = sessionStorage.getItem('token');
-    fetch("http://localhost:5000/api/personajes/" + json.character, {
+    fetch(BASE_URL+"/api/personajes/" + json.character, {
         headers: { Authorization: token },
     })
         .then(response => response.json())  // convertir a json
@@ -73,7 +74,7 @@ function buscarRostro(json) {
 
 function buscarInferior(json) {
     const token = sessionStorage.getItem('token');
-    fetch("http://localhost:5000/api/vestimenta/" + json.inferior, {
+    fetch(BASE_URL+"/api/vestimenta/" + json.inferior, {
         headers: { Authorization: token },
     })
         .then(response => response.json())  // convertir a json
@@ -85,7 +86,7 @@ function buscarInferior(json) {
 
 function buscarCalzado(json) {
     const token = sessionStorage.getItem('token');
-    fetch("http://localhost:5000/api/vestimenta/" + json.calzado, {
+    fetch(BASE_URL+"/api/vestimenta/" + json.calzado, {
         headers: { Authorization: token },
     })
         .then(response => response.json())  // convertir a json

@@ -1,3 +1,5 @@
+const BASE_URL = "http://localhost:5000";
+
 window.onload = function () {
     getCharacter();
 }
@@ -33,7 +35,7 @@ function guardar() {
 
     console.log(JSON.stringify(personaje, null, 2));
 
-    fetch('http://localhost:5000/api/jugadores/vestir', {
+    fetch(BASE_URL+'/api/jugadores/vestir', {
         method: "POST",
         headers: {
             Authorization: token,
@@ -77,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const token = sessionStorage.getItem('token');
 
-    fetch('http://localhost:5000/api/vestimenta/buscar/superior', {
+    fetch(BASE_URL+'/api/vestimenta/buscar/superior', {
         headers: { Authorization: token }
     })
         // Exito
@@ -100,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const token = sessionStorage.getItem('token');
-    fetch('http://localhost:5000/api/vestimenta/buscar/inferior', {
+    fetch(BASE_URL+'/api/vestimenta/buscar/inferior', {
         headers: { Authorization: token }
     })
         // Exito
@@ -123,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const token = sessionStorage.getItem('token');
-    fetch('http://localhost:5000/api/vestimenta/buscar/calzado', {
+    fetch(BASE_URL+'/api/vestimenta/buscar/calzado', {
         headers: { Authorization: token }
     })
         // Exito

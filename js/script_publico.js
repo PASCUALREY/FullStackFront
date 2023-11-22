@@ -1,5 +1,7 @@
+const BASE_URL = "http://localhost:5000";
+
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('http://localhost:5000/api/public/ultimospersonajes')
+    fetch(BASE_URL+'/api/public/ultimospersonajes')
         // Exito
         .then(response => response.json())  // convertir a json
         .then(json => mostrarJugadores(json))    //imprimir los datos en la consola
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function buscarRostro(json,i) {
-    fetch("http://localhost:5000/api/personajes/" + json.character)
+    fetch(BASE_URL+"/api/personajes/" + json.character)
         .then(response => response.json())  // convertir a json
         .then(json => mostrarRostro(json,i))
         .catch(error => {
@@ -34,7 +36,7 @@ function mostrarRostro(json,i) {
 });
 
 function buscarSuperior(json,i) {
-    fetch("http://localhost:5000/api/vestimenta/" + json.superior)
+    fetch(BASE_URL+"/api/vestimenta/" + json.superior)
         .then(response => response.json())  // convertir a json
         .then(json => mostrarSuperior(json,i))
         .catch(error => {
@@ -49,7 +51,7 @@ function mostrarSuperior(json,i) {
 }
 
 function buscarInferior(json,i) {
-    fetch("http://localhost:5000/api/vestimenta/" + json.inferior)
+    fetch(BASE_URL+"/api/vestimenta/" + json.inferior)
         .then(response => response.json())  // convertir a json
         .then(json => mostrarInferior(json,i))
         .catch(error => {
@@ -64,7 +66,7 @@ function mostrarInferior(json,i) {
 }
 
 function buscarCalzado(json,i) {
-    fetch("http://localhost:5000/api/vestimenta/" + json.calzado)
+    fetch(BASE_URL+"/api/vestimenta/" + json.calzado)
         .then(response => response.json())  // convertir a json
         .then(json => mostrarCalzado(json,i))
         .catch(error => {

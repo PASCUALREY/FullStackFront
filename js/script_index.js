@@ -1,7 +1,8 @@
+const BASE_URL = "http://localhost:5000";
+
 window.onload = function () {
   getUsername();
 }
-
 function getUsername() {
   // Obtener el token de localStorage
   const token = sessionStorage.getItem('token');
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const token = sessionStorage.getItem('token');
 
-  fetch('http://localhost:5000/api/personajes', {
+  fetch(BASE_URL+'/api/personajes', {
       headers: { Authorization: token }
   })
       // Exito
