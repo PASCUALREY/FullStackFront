@@ -39,7 +39,7 @@ function inicioSesion() {
             console.log(data);
             sessionStorage.setItem('token', data);
             sessionStorage.setItem('username', usuario);
-            window.location.href="../html/index.html"
+            window.location.href="../html/seleccion.html"
         })
         .catch(error => {
             // Maneja errores

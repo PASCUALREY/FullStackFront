@@ -1,37 +1,28 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Proyecto Fullstack</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="../css/styles_index.css">
-    <script type="text/javascript" src="../js/script_index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' type='text/css' media='screen' href='../css/styles_login.css'>
+  <script type="text/javascript" src="../js/script_login.js"></script>
+  <title>Iniciar Sesión</title>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>Juego Vestir Personajes</h1>
-        </header>
-        <div class="content">
-            <h2>Seleccionar un personaje</h2>
-            <form action="Javascript:getCharacter()" method="GET">
-                <div id="personaje" class="personajes">
-                </div>
-                <label style="display: grid;place-items: center;">
-                    <button type="submit" class="botonElegir">Elegir Personaje</button>
-                    <button type="button" class="botonElegir" onclick=window.location.href="../html/buscar.html">Buscar Personaje</button>
-                </label>
-            </form>
-        </div>
-        <footer>
-            <div class="contact">
-                <p id="usuario"> Usuario: </p>
-            </div>
-        </footer>
-    </div>
-</body>
 
+  <div class="container">
+    <form action="Javascript:inicioSesion()" method="GET">
+      <h2>Iniciar Sesión</h2>
+
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">PIN:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit" class="login-button">Iniciar Sesión</button>
+    </form>
+    <button type="button" onclick=window.location.href="../html/publico.html">Ultimos 5 Personajes</button>
+  </div>
+
+</body>
 </html>
