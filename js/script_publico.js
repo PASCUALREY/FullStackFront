@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://juegovestir-api.onrender.com";
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch(BASE_URL+'/api/public/ultimospersonajes')

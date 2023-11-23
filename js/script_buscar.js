@@ -1,4 +1,4 @@
-const BASE_URL = "https://juego-api.onrender.com"
+const BASE_URL = "https://juegovestir-api.onrender.com"
 let personajeActual = 1;
 let totalPersonajes = 0;
 
